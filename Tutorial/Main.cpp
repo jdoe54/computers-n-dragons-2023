@@ -3,8 +3,10 @@
 #include <iostream>
 #include <list>
 #include <windows.h>
+#include <conio.h>
 
 #include "Physical.h"
+#include "Character.h"
 
 using namespace std;
 
@@ -52,7 +54,15 @@ int quitGame() {
 	return 0;
 }
 
+string randomThing() {
+	int chance = rand() % 100 + 1;
+	if (chance > 50) {
+
+	}
+}
+
 int loadGame() {
+
 	cout << "Loading game" << endl;
 	int player = 0;
 
@@ -68,6 +78,7 @@ int loadGame() {
 				
 			}
 			else {
+				
 				map[i][k] = ".";
 			}
 			
@@ -120,6 +131,8 @@ int main() {
 	else if (response == "2") {
 		
 		loadGame();
+		
+		
 	}
 	else if (response == "3") {
 		quitGame();
