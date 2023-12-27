@@ -11,6 +11,7 @@ class Tile: public Physical
 	Character person;
 	int height = 0;
 	bool characterBoolean = false;
+	bool groundBoolean = false;
 	Item ground;
 
 	public:
@@ -24,6 +25,7 @@ class Tile: public Physical
 		std::string getDescription();
 		Item onGround();
 		bool getCharacter();
+		bool getGround();
 
 		void setCharacter(Character newPerson);
 		void leaveTile();

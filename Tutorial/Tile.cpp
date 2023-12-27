@@ -34,7 +34,14 @@ bool Tile::getCharacter() {
 	}
 }
 
-
+bool Tile::getGround() {
+	if (Tile::groundBoolean == 1) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
 
 void Tile::setCharacter(Character newPerson) {
 	Tile::characterBoolean = true;
@@ -51,6 +58,13 @@ Character Tile::getCharacterObject() {
 
 std::string Tile::print() {
 	int* coordinate = Tile::getCoord();
-	std::string result = Tile::getCharacterObject().getName() + " on " + Tile::getDescription() + " " + std::to_string(coordinate[0]) + ", " + std::to_string(coordinate[1]);
+	std::string result;
+	if (Tile::getCharacter() == 1) {
+		result = Tile::getCharacterObject().getName() + " on " + Tile::getDescription();;
+	}
+	else {
+		result = Tile::getDescription();
+	}
+	 
 	return result;
 }

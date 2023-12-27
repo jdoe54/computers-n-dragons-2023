@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <list>
 #include "Physical.h"
 #include "Item.h"
 
@@ -7,6 +8,8 @@ class Character
 {
 	std::string name = "";
 	std::string type = "";
+
+	list<Item> inventory;
 
 	int curHealth = 0;
 	int maxHealth = 0;
@@ -26,6 +29,7 @@ class Character
 	int charisma = 0;
 
 	bool isAlive = true;
+	bool isEquipped = false;
 
 	int level = 1;
 	int xp = 0;
@@ -53,7 +57,13 @@ class Character
 		int setXp(int addXp);
 		int takeDamage(int damage);
 		int attack(Character other, Item equipped);
+
+		list<Item> getInventory();
 		
+		bool checkIfEquipped();
+		Item getEquipped();
+		void removeEquipped();
+		void wield(Item newTool);
 		void setType(std::string type);
 
 		

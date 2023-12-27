@@ -1,6 +1,7 @@
 #include "Character.h"
 #include "Physical.h"
 #include <string>
+#include <list>
 
 
 Character::Character(std::string name, int level, int health, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma, int x, int y) {
@@ -36,6 +37,27 @@ int Character::attack(Character other, Item equipped) {
 
 void Character::setType(std::string newType) {
 	Character::type = newType;
+}
+
+void Character::wield(Item newTool) {
+	Character::isEquipped = true;
+	Character::equipped = newTool;
+}
+
+void Character::removeEquipped() {
+	Character::isEquipped = false;
+}
+
+bool Character::checkIfEquipped() {
+	return Character::isEquipped;
+}
+
+Item Character::getEquipped() {
+	return Character::equipped;
+}
+
+list<Item> Character::getInventory() {
+	return Character::inventory;
 }
 
 Bandit::Bandit() : Character("Bandit", 1, 4, 1, 1, 1, 1, 1, 1, 0, 0) {
