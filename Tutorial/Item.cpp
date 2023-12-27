@@ -12,3 +12,7 @@ Item::Item(std::string name, std::string type, int weight, int strength, int dur
 std::string Item::getName() {
 	return Item::name;
 }
+
+int Item::getDamage() {
+	return Item::damage;
+}

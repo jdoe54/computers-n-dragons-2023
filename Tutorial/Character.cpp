@@ -3,7 +3,7 @@
 #include <string>
 
 
-Character::Character(std::string name, int level, int health, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma, int x, int y): Physical(x, y) {
+Character::Character(std::string name, int level, int health, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma, int x, int y) {
 
 	Character::level = level;
 	Character::curHealth = health;
@@ -23,6 +23,25 @@ int Character::setXp(int addXp) {
 
 int Character::takeDamage(int damage) {
 	Character::curHealth = Character::getHealth() - damage;
+	if (Character::getHealth() < 0) {
+		Character::isAlive = false;
+	}
 	return Character::getHealth();
 }
 
+int Character::attack(Character other, Item equipped) {
+	other.takeDamage(equipped.getDamage());
+	return equipped.getDamage();
+}
+
+void Character::setType(std::string newType) {
+	Character::type = newType;
+}
+
+Bandit::Bandit() : Character("Bandit", 1, 4, 1, 1, 1, 1, 1, 1, 0, 0) {
+	Bandit::setType("Enemy");
+}
+
+Player::Player() : Character("Player", 1, 16, 1, 1, 1, 1, 1, 1, 0, 0) {
+	Player::setType("Player");
+}

@@ -1,10 +1,12 @@
 #pragma once
 #include <string>
 #include "Physical.h"
+#include "Item.h"
 
-class Character: public Physical
+class Character
 {
 	std::string name = "";
+	std::string type = "";
 
 	int curHealth = 0;
 	int maxHealth = 0;
@@ -23,11 +25,16 @@ class Character: public Physical
 	int wisdom = 0;
 	int charisma = 0;
 
+	bool isAlive = true;
+
 	int level = 1;
 	int xp = 0;
 
+	Item equipped;
+
 	public:
 		Character(std::string name, int level, int health, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma, int x, int y);
+		Character() = default;
 
 		int getHealth() { return curHealth; }
 		int getMana() { return curMana; }
@@ -40,9 +47,26 @@ class Character: public Physical
 		int getCharisma() { return charisma; }
 		int getLevel() { return level; }
 		int getXp() { return xp; }
+		std::string getName() { return name; }
+		std::string getType() { return type; }
 
 		int setXp(int addXp);
 		int takeDamage(int damage);
+		int attack(Character other, Item equipped);
+		
+		void setType(std::string type);
+
+		
 
 };
 
+class Bandit : public Character 
+{
+public:
+	Bandit();
+};
+
+class Player : public Character {
+public:
+	Player();
+};
