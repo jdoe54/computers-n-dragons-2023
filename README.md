@@ -12,6 +12,8 @@ In 2023, I brought back the original project that I worked on in 2016, and tried
 - ✅ Color-coded UI in terminal
 - ✅ Written entirely in modern C++
 
+![Video](https://i.gyazo.com/d2dbfea74ad802be31d68d9eb79d8efb.gif)
+
 # Requirements
 
 - C++ Compiler (g++)
@@ -31,4 +33,4 @@ In 2023, I brought back the original project that I worked on in 2016, and tried
 - Interact tells you what is next to you.
 - Attack allows you to try an assortment of attacks based on your hands, feet, head, or an item.
 
-![Video](https://i.gyazo.com/d2dbfea74ad802be31d68d9eb79d8efb.gif)
+
