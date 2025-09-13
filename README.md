@@ -4,13 +4,12 @@ When I first learned how to program in C++, I tried making a text-adventure game
 
 In 2023, I brought back the original project that I worked on in 2016, and tried to expand upon it by adding ASCII text with random placement of grass, enemies, and water. 
 
-- ✅ Fully rendered **tile-based world map** in ASCII
-- ✅ Player character (`P`) with movement and command interface
-- ✅ Hostile entities (`E`) with world logic
-- ✅ Multiple terrain types (`.`, `~`, `*`, etc.)
-- ✅ Turn-based menu system: `Move`, `Interact`, `Attack`, `Bag`
-- ✅ Color-coded UI in terminal
-- ✅ Written entirely in modern C++
+- Fully rendered **tile-based world map** in ASCII
+- Player character (`P`) with movement and command interface
+- Hostile entities (`E`) with world logic
+- Multiple terrain types (`.`, `~`, `*`, etc.)
+- Turn-based menu system: `Move`, `Interact`, `Attack`, `Bag`
+- Color-coded UI in terminal
 
 ![Video](https://i.gyazo.com/d2dbfea74ad802be31d68d9eb79d8efb.gif)
 
