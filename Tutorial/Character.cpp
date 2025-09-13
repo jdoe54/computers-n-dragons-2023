@@ -1,4 +1,5 @@
 #include "Character.h"
+#include "Player.h"
 #include "Physical.h"
 #include <string>
 #include <list>

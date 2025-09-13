@@ -76,7 +76,3 @@ public:
 	Bandit();
 };
 
-class Player : public Character {
-public:
-	Player();
-};

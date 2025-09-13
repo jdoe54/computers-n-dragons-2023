@@ -6,6 +6,7 @@
 #include <conio.h>
 #include <array>
 
+#include "Player.h"
 #include "Physical.h"
 #include "Character.h"
 #include "Tile.h"
